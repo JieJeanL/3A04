@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_setting_activities"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.jieluo.settings.SettingActivities"
+    tools:showIn="@layout/activity_setting_activities">
+
+    <RadioButton
+        android:text="Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButtonPrice"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
+        android:onClick="updateView"/>
+
+    <CheckBox
+        android:text="Water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkWater"
+        android:layout_below="@+id/checkAir"
+        android:layout_alignLeft="@+id/checkAir"
+        android:layout_alignStart="@+id/checkAir"
+        android:onClick="updateMode"/>
+
+    <CheckBox
+        android:text="Land"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkLand"
+        android:layout_below="@+id/checkWater"
+        android:layout_alignLeft="@+id/checkWater"
+        android:layout_alignStart="@+id/checkWater"
+        android:onClick="updateMode"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Option for Transportation"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_marginTop="43dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/checkWater"
+        android:layout_alignEnd="@+id/checkWater" />
+
+    <CheckBox
+        android:text="Air"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:id="@+id/checkAir"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:onClick="updateMode"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Sort Results By"
+        android:ems="10"
+        android:layout_below="@+id/checkLand"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginTop="34dp"
+        android:id="@+id/editText2" />
+
+    <RadioButton
+        android:text="Distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButtonDistance"
+        android:layout_below="@+id/radioButtonTime"
+        android:layout_alignLeft="@+id/radioButtonTime"
+        android:layout_alignStart="@+id/radioButtonTime"
+        android:onClick="updateView"/>
+
+    <RadioButton
+        android:text="Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioButtonTime"
+        android:layout_below="@+id/radioButtonPrice"
+        android:layout_alignLeft="@+id/radioButtonPrice"
+        android:layout_alignStart="@+id/radioButtonPrice"
+        android:onClick="updateView"/>
+
+    <Button
+        android:text="Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButtonDistance"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/button"
+        android:onClick= "confirmSettings"/>
+
+</RelativeLayout>
